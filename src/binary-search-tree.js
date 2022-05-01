@@ -39,8 +39,8 @@ class BinarySearchTree {
     if (!node) return null;
     
     if (data < node.data) return this.search(node.left, data);
-    else if (data > node.data) return this.search(node.right, data);
-    else return node;
+    if (data > node.data) return this.search(node.right, data);
+    return node;
   }
 
   has(data) {
